@@ -170,7 +170,7 @@ jobs:
       - name: Setup env
         run: |
           # echo "GIT_SHORT_HASH=$(git rev-parse --short HEAD)" >> "$GITHUB_ENV"
-          echo "GIT_SHORT_HASH='dev'" >> "$GITHUB_ENV"
+          echo "GIT_SHORT_HASH=dev" >> "$GITHUB_ENV"
           if [ -z "${{ inputs.flavor }}" ]
           then
             echo "RELEASE_FLAVOR=canary" >> "$GITHUB_ENV"
