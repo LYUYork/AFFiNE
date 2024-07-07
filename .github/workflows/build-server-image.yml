@@ -181,13 +181,13 @@ jobs:
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
-        env: 
-          username: ${{ secrets.DOCKERHUB_USER }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+        # env: 
+        #   username: ${{ secrets.DOCKERHUB_USER }}
+        #   password: ${{ secrets.DOCKERHUB_TOKEN }}
         with:
         #   registry: ghcr.io
-          username: ${{ secrets.DOCKERHUB_USER }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: lyc15
+          password: dckr_pat_yAbeGz9L6BTOekvFi78o6dZSyS4
           logout: false
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
