@@ -177,9 +177,13 @@ jobs:
           else
             echo "RELEASE_FLAVOR=${{ inputs.flavor }}" >> "$GITHUB_ENV"
           fi
+          echo "username=${{ secrets.DOCKERHUB_USER }}"
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
+        env: 
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
         with:
         #   registry: ghcr.io
           logout: false
