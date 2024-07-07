@@ -238,4 +238,4 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           provenance: true
           file: .github/deployment/node/Dockerfile
-          tags: lyc15/affine:affine-graphql_${{env.RELEASE_FLAVOR}}-${{ env.GIT_SHORT_HASH }},lyc15/affine:affine-graphql_${{env.RELEASE_FLAVOR}}
+          tags: lyc15/affine:affine-graphql
