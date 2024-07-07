@@ -136,6 +136,8 @@ jobs:
   build-docker:
     name: Build Docker
     runs-on: ubuntu-latest
+    environment: 
+      name: canary
     needs:
       - build-server
       - build-web-selfhost
