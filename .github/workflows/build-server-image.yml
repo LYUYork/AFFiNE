@@ -182,7 +182,7 @@ jobs:
         uses: docker/login-action@v3
         with:
         #   registry: ghcr.io
-        #   logout: false
+          logout: false
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Set up QEMU
