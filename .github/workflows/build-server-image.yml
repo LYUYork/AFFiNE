@@ -195,12 +195,12 @@ jobs:
         uses: docker/setup-buildx-action@v3
       # setup node without cache configuration
       # Prisma cache is not compatible with docker build cache
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: '.nvmrc'
-          registry-url: https://npm.pkg.github.com
-          scope: '@toeverything'
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version-file: '.nvmrc'
+      #     registry-url: https://npm.pkg.github.com
+      #     scope: '@toeverything'
 
       # - name: Download selfhost web artifact
       #   uses: actions/download-artifact@v4
