@@ -186,9 +186,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
         with:
         #   registry: ghcr.io
-          logout: false
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          logout: false
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
