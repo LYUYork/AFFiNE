@@ -169,7 +169,8 @@ jobs:
       #     mv server-native.node ./packages/backend/server/server-native.armv7.node
       - name: Setup env
         run: |
-          echo "GIT_SHORT_HASH=$(git rev-parse --short HEAD)" >> "$GITHUB_ENV"
+          # echo "GIT_SHORT_HASH=$(git rev-parse --short HEAD)" >> "$GITHUB_ENV"
+          echo "GIT_SHORT_HASH='dev'" >> "$GITHUB_ENV"
           if [ -z "${{ inputs.flavor }}" ]
           then
             echo "RELEASE_FLAVOR=canary" >> "$GITHUB_ENV"
@@ -178,7 +179,7 @@ jobs:
           fi
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
         #   registry: ghcr.io
         #   logout: false
